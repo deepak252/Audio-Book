@@ -173,7 +173,6 @@ class _SelectedAudioScreenState extends State<SelectedAudioScreen> {
                 ),
               ),
               SizedBox(height: Device.height*0.02,),
-              // const Spacer(),
               //Slider 
               ValueListenableBuilder<double>(
                 valueListenable: _sliderPosNotifier,
@@ -253,18 +252,20 @@ class _SelectedAudioScreenState extends State<SelectedAudioScreen> {
                     flex: 3,
                     child: GestureDetector(
                       onTap: ()async{
-                        if(_audioPlayer.playing){
-                          pauseAudio();
-                        }else{
-                          if(_sliderPosNotifier.value.toInt()==_maxDuration.toInt()){
-                            await resetAudio();
+                        if(!_loading){
+                          if(_audioPlayer.playing){
+                            pauseAudio();
+                          }else{
+                            if(_sliderPosNotifier.value.toInt()==_maxDuration.toInt()){
+                              await resetAudio();
+                            }
+                            playAudio();
                           }
-                          playAudio();
-                        }
-                        if(mounted){
-                          setState(() {
-                            
-                          });
+                          if(mounted){
+                            setState(() {
+                              
+                            });
+                          }
                         }
                       },
                       child: Icon(

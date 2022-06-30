@@ -20,13 +20,13 @@ List<Map> sampleAudio = [
   {
     "title" : "The Kidnapper's Accomplice",
     "author": "C.J Archer",
-    "filePath": "https://dl.espressif.com/dl/audio/gs-16b-1c-44100hz.mp3",
+    "filePath": "https://www2.cs.uic.edu/~i101/SoundFiles/StarWars60.wav",
     "logo": "assets/images/Image Placeholder 2-1.png"
   },
   {
     "title" : "Light Mage",
     "author": "Laurie Forest",
-    "filePath": "https://dl.espressif.com/dl/audio/gs-16b-2c-44100hz.mp3",
+    "filePath": "https://www2.cs.uic.edu/~i101/SoundFiles/ImperialMarch60.wav",
     "logo": "assets/images/Image Placeholder 2.png"
   }
 ];
